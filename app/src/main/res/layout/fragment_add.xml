@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AddFragment">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Products Section"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -17,32 +41,36 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardCategories"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="10dp"
-                    android:layout_margin="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
                     <ImageView
                         android:id="@+id/backgroundImageView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:src="@drawable/category" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#80020202" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:text="Categories"
-                        android:textSize="30sp"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:gravity="center" />
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -51,31 +79,35 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSpecial"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="10dp"
-                    android:layout_margin="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:src="@drawable/special" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#80020202" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:text="Special Card"
-                        android:textSize="30sp"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:gravity="center" />
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -85,58 +117,176 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardProducts"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="10dp"
-                    android:layout_margin="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp">
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:src="@drawable/products" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#80020202" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:text="Products"
-                        android:textSize="30sp"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:gravity="center" />
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 
-
-            <!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/cardAddCategory"-->
-<!--                app:cardCornerRadius="10dp"-->
-<!--                app:cardElevation="10dp"-->
-<!--                android:layout_margin="20dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="200dp">-->
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:text="Add Category"-->
-<!--                    android:textSize="30sp"-->
-<!--                    android:background="@drawable/add_category"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@color/purple_500"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:gravity="center"/>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
         </LinearLayout>
+
     </ScrollView>
+
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <FrameLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent">-->
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                    android:id="@+id/cardCategories"-->
+    <!--                    app:cardCornerRadius="10dp"-->
+    <!--                    app:cardElevation="10dp"-->
+    <!--                    android:layout_margin="20dp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="150dp">-->
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/backgroundImageView"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:scaleType="centerCrop"-->
+    <!--                        android:src="@drawable/category" />-->
+    <!--                    <View-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="#80020202" />-->
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:text="Categories"-->
+    <!--                        android:textSize="30sp"-->
+    <!--                        android:textAllCaps="false"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        android:gravity="center" />-->
+
+    <!--                </androidx.cardview.widget.CardView>-->
+
+    <!--            </FrameLayout>-->
+
+    <!--            <FrameLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent">-->
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                    android:id="@+id/cardSpecial"-->
+    <!--                    app:cardCornerRadius="10dp"-->
+    <!--                    app:cardElevation="10dp"-->
+    <!--                    android:layout_margin="20dp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="150dp">-->
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:scaleType="centerCrop"-->
+    <!--                        android:src="@drawable/special" />-->
+    <!--                    <View-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="#80020202" />-->
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:text="Special Card"-->
+    <!--                        android:textSize="30sp"-->
+    <!--                        android:textAllCaps="false"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        android:gravity="center" />-->
+
+    <!--                </androidx.cardview.widget.CardView>-->
+
+    <!--            </FrameLayout>-->
+
+
+    <!--            <FrameLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent">-->
+    <!--                <androidx.cardview.widget.CardView-->
+    <!--                    android:id="@+id/cardProducts"-->
+    <!--                    app:cardCornerRadius="10dp"-->
+    <!--                    app:cardElevation="10dp"-->
+    <!--                    android:layout_margin="20dp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="150dp">-->
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:scaleType="centerCrop"-->
+    <!--                        android:src="@drawable/products" />-->
+    <!--                    <View-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="#80020202" />-->
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:text="Products"-->
+    <!--                        android:textSize="30sp"-->
+    <!--                        android:textAllCaps="false"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        android:gravity="center" />-->
+
+    <!--                </androidx.cardview.widget.CardView>-->
+
+    <!--            </FrameLayout>-->
+
+
+    <!--                        <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/cardAddCategory"-->
+    <!--                app:cardCornerRadius="10dp"-->
+    <!--                app:cardElevation="10dp"-->
+    <!--                android:layout_margin="20dp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="200dp">-->
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:text="Add Category"-->
+    <!--                    android:textSize="30sp"-->
+    <!--                    android:background="@drawable/add_category"-->
+    <!--                    android:textAllCaps="false"-->
+    <!--                    android:textColor="@color/purple_500"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:gravity="center"/>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--        </LinearLayout>-->
+    <!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
